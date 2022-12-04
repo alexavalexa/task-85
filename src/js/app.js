@@ -4,12 +4,9 @@ window.addEventListener("DOMContentLoaded", () => {
   // This block will be executed once the page is loaded and ready
 
   const ul = document.querySelector("ul");
-});
+  let url = "https://pokeapi.co/api/v2/pokemon?limit=10";
 
-let url = `https://pokeapi.co/api/v2/pokemon`;
-const ul = document.querySelector("ul");
-
-fetch(url)
+  fetch(url)
   .then((response) => {
     response.json().then((data) => {
       data.results.forEach((element) => {
@@ -19,3 +16,9 @@ fetch(url)
       });
     });
   });
+
+});
+
+
+
+
